@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Lễ tưởng niệm các Anh hùng Liệt sĩ nhân ngày 27/7",
+    "date": "2024-07-27",
+    "type": "past",
+    "summary": "Buổi lễ trang trọng tưởng niệm các Anh hùng Liệt sĩ với sự tham gia của đông đảo nhân dân và thanh thiếu niên",
+    "content": "Ngày 27/7/2024, tại Nhà bia ghi tên liệt sĩ phường Bình Lộc đã diễn ra buổi lễ tưởng niệm các Anh hùng Liệt sĩ. Buổi lễ có sự tham gia của các đồng chí lãnh đạo địa phương, đại diện các tổ chức đoàn thể, cùng đông đảo nhân dân và thanh thiếu niên trong phường. Trong không khí trang trọng, mọi người đã dành phút mặc niệm, dâng hương tưởng nhớ các Anh hùng Liệt sĩ đã hy sinh vì độc lập, tự do của Tổ quốc. Buổi lễ là dịp để giáo dục truyền thống yêu nước cho thế hệ trẻ, khơi dậy lòng tự hào dân tộc.",
+    "images": [
+      "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=1200&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200&h=800&fit=crop"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Hoạt động dọn dẹp và chăm sóc Đền thờ Liệt sỹ",
+    "date": "2024-08-15",
+    "type": "past",
+    "summary": "Đoàn thanh niên phường Bình Lộc tổ chức hoạt động dọn dẹp, chăm sóc khu vực Đền thờ Liệt sỹ",
+    "content": "Ngày 15/8/2024, Đoàn thanh niên phường Bình Lộc đã tổ chức hoạt động dọn dẹp và chăm sóc khu vực Đền thờ Liệt sỹ. Hơn 50 đoàn viên thanh niên đã tham gia dọn dẹp cỏ, quét dọn, lau chùi khu vực đền thờ, trồng thêm cây xanh và hoa. Hoạt động này không chỉ giúp giữ gìn vẻ đẹp của di tích mà còn giáo dục ý thức bảo vệ, tôn trọng các địa chỉ đỏ cho thế hệ trẻ. Đây là hoạt động thường niên của Đoàn thanh niên phường, thể hiện tinh thần trách nhiệm với di sản văn hóa, lịch sử của địa phương.",
+    "images": [
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=800&fit=crop"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Chương trình giáo dục truyền thống cho học sinh",
+    "date": "2024-09-02",
+    "type": "past",
+    "summary": "Tổ chức tham quan và học tập tại các địa chỉ đỏ cho học sinh các trường trên địa bàn",
+    "content": "Ngày 2/9/2024, nhân kỷ niệm Quốc khánh, phường Bình Lộc đã tổ chức chương trình giáo dục truyền thống cho hơn 200 học sinh từ các trường tiểu học và trung học cơ sở trên địa bàn. Các em đã được tham quan Nhà bia ghi tên liệt sĩ và Đền thờ Liệt sỹ, nghe kể về lịch sử và ý nghĩa của các di tích. Các thầy cô giáo và cán bộ địa phương đã giới thiệu về cuộc đời và sự hy sinh của các Anh hùng Liệt sĩ, giúp các em hiểu rõ hơn về lịch sử địa phương và truyền thống yêu nước. Chương trình đã để lại ấn tượng sâu sắc cho các em học sinh.",
+    "images": [
+      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&h=800&fit=crop"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Lễ dâng hương tưởng niệm nhân ngày Thương binh Liệt sĩ",
+    "date": "2024-12-22",
+    "type": "upcoming",
+    "summary": "Lễ dâng hương trang trọng tại Đền thờ Liệt sỹ với sự tham gia của toàn thể nhân dân",
+    "content": "Ngày 22/12/2024, phường Bình Lộc sẽ tổ chức Lễ dâng hương tưởng niệm các Anh hùng Liệt sĩ tại Đền thờ Liệt sỹ. Buổi lễ sẽ có sự tham gia của các đồng chí lãnh đạo địa phương, đại diện các tổ chức đoàn thể, gia đình liệt sĩ, cùng đông đảo nhân dân trong phường. Chương trình bao gồm: dâng hương tưởng niệm, phút mặc niệm, đọc diễn văn tưởng niệm, và các tiết mục văn nghệ. Đây là dịp để toàn thể nhân dân thể hiện lòng biết ơn sâu sắc đối với các Anh hùng Liệt sĩ đã hy sinh vì độc lập, tự do của Tổ quốc.",
+    "images": []
+  },
+  {
+    "id": 5,
+    "title": "Ngày hội Thanh niên tình nguyện chăm sóc địa chỉ đỏ",
+    "date": "2025-01-20",
+    "type": "upcoming",
+    "summary": "Hoạt động tình nguyện của thanh niên trong việc bảo tồn và phát huy giá trị các địa chỉ đỏ",
+    "content": "Ngày 20/1/2025, Đoàn thanh niên phường Bình Lộc sẽ tổ chức Ngày hội Thanh niên tình nguyện với chủ đề chăm sóc và bảo tồn các địa chỉ đỏ. Chương trình bao gồm: dọn dẹp, vệ sinh khu vực Nhà bia và Đền thờ; trồng cây xanh, hoa cảnh; sơn sửa, bảo dưỡng các công trình; tổ chức các hoạt động giáo dục truyền thống. Hoạt động này nhằm phát huy tinh thần tình nguyện của thanh niên, giáo dục ý thức bảo vệ di sản văn hóa, lịch sử, và tạo môi trường học tập, trải nghiệm cho thế hệ trẻ. Dự kiến có hơn 100 đoàn viên thanh niên tham gia.",
+    "images": []
+  }
+]
