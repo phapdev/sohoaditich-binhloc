@@ -44,8 +44,8 @@ export function Navigation() {
     <nav
       className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
         scrolled
-          ? 'bg-background/95 backdrop-blur-md shadow-sm'
-          : 'bg-background/80 backdrop-blur-sm'
+          ? 'bg-background/95 shadow-sm'
+          : 'bg-blue-500 backdrop-blur-sm text-white'
       }`}
     >
       <div className="container flex h-16 items-center justify-between">
@@ -59,8 +59,8 @@ export function Navigation() {
             className="h-12 w-12 object-contain sm:h-14 sm:w-14"
           />
           <div className="hidden flex-col sm:flex">
-            <span className="font-bold text-sm leading-tight">Địa Chỉ Đỏ</span>
-            <span className="text-xs text-muted-foreground leading-tight">
+            <span className="font-bold text-sm leading-tight uppercase">Địa Chỉ Đỏ</span>
+            <span className={`text-xs ${scrolled ? 'text-muted-foreground' : 'text-white'} leading-tight`}>
               Phường Bình Lộc, Tỉnh Đồng Nai
             </span>
           </div>
@@ -72,10 +72,10 @@ export function Navigation() {
             <Link
               key={item.path}
               to={item.path}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
+              className={`text-sm font-medium transition-colors uppercase hover:text-primary ${scrolled ? 'text-muted-foreground' : 'text-white'} ${
                 location.pathname === item.path
-                  ? 'text-primary'
-                  : 'text-muted-foreground'
+                  ? scrolled ? 'text-primary' : 'text-white'
+                  : scrolled ? 'text-muted-foreground' : 'text-white'
               }`}
             >
               {item.label}

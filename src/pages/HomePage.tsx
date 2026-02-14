@@ -25,13 +25,13 @@ export function HomePage() {
   return (
     <div className="space-y-0">
       {/* Hero Section - Full Width với Background Image */}
-      <section className="relative min-h-[85vh] h-screen overflow-hidden">
+      <section className="relative h-full overflow-hidden">
         {/* Background Image với Overlay */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 h-full w-full">
           <img
-            src="https://images.unsplash.com/photo-1511497584788-876760111969?w=1920&h=1080&fit=crop"
+            src="/images/dang-hoa-ntls.jpg"
             alt="Phường Bình Lộc"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-center"
             loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
@@ -92,13 +92,13 @@ export function HomePage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="hidden lg:block"
             >
-              <div className="relative mx-auto aspect-square w-full max-w-md">
-                <div className="absolute inset-0 rounded-full border-4 border-white/30 shadow-2xl" />
+              <div className="relative mx-auto aspect-square w-full max-w-lg">
+                <div className="absolute inset-0 rounded-full border-5 border-white/30 shadow-2xl" />
                 <div className="relative h-full w-full overflow-hidden rounded-full">
                   {featuredLocation?.images && featuredLocation.images.length > 0 ? (
                     <img
-                      src={featuredLocation.images[0]}
-                      alt={featuredLocation.name}
+                      src="/images/dang-huong-ntls.jpg"
+                      alt="Dâng hương tưởng niệm liệt sĩ"
                       className="h-full w-full object-cover"
                       loading="lazy"
                       onError={(e) => {
@@ -162,7 +162,7 @@ export function HomePage() {
             className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl shadow-xl"
           >
             <img
-              src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=1200&h=600&fit=crop"
+              src="/images/dang-huong-ntls.jpg"
               alt="Di tích lịch sử Phường Bình Lộc"
               className="h-[400px] w-full object-cover md:h-[500px]"
               loading="lazy"
