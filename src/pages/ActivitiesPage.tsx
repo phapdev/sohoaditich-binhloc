@@ -15,13 +15,14 @@ type Activity = {
   summary: string
   content: string
   images: string[]
+  video: string
 }
 
 export function ActivitiesPage() {
   const activities = activitiesData as Activity[]
   const [selectedActivity, setSelectedActivity] = useState<Activity | null>(null)
 
-  const pastActivities = activities.filter((a) => a.type === 'past')
+  const pastActivities = activities.filter((a) => a.type === 'past').sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
   const upcomingActivities = activities.filter((a) => a.type === 'upcoming')
   const featuredActivity = pastActivities[0] || upcomingActivities[0]
 
@@ -43,7 +44,7 @@ export function ActivitiesPage() {
   }, [activities])
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 mx-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -302,9 +303,17 @@ export function ActivitiesPage() {
               </CardHeader>
               <CardContent>
                 <div className="prose max-w-none">
-                  <p className="leading-relaxed text-muted-foreground">
-                    {selectedActivity.content}
-                  </p>
+                  <div className="space-y-4 leading-relaxed text-muted-foreground">
+                    {selectedActivity.content
+                      .split(/\n{2,}/)
+                      .map((paragraph) => paragraph.trim())
+                      .filter(Boolean)
+                      .map((paragraph, index) => (
+                        <p key={index} className="whitespace-pre-line">
+                          {paragraph}
+                        </p>
+                      ))}
+                  </div>
                 </div>
                 {selectedActivity.images && selectedActivity.images.length > 1 && (
                   <div className="mt-6 grid grid-cols-2 gap-4">
@@ -321,6 +330,17 @@ export function ActivitiesPage() {
                         }}
                       />
                     ))}
+                  </div>
+                )}
+                {selectedActivity.video && (
+                  <div className="mt-6">
+                    <iframe
+                      src={selectedActivity.video}
+                      title={`${selectedActivity.title} - Video`}
+                      className="w-full aspect-video rounded-lg"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
                   </div>
                 )}
               </CardContent>

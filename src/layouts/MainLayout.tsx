@@ -1,9 +1,9 @@
-import { Navigation } from '@/components/Navigation'
-import { BottomNavigation } from '@/components/BottomNavigation'
-import { motion } from 'framer-motion'
+import { Navigation } from "@/components/Navigation";
+import { BottomNavigation } from "@/components/BottomNavigation";
+import { motion } from "framer-motion";
 
 interface MainLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export function MainLayout({ children }: MainLayoutProps) {
@@ -26,7 +26,9 @@ export function MainLayout({ children }: MainLayoutProps) {
             <div>
               <h3 className="mb-4 font-serif text-lg font-bold">Về dự án</h3>
               <p className="text-sm text-muted-foreground">
-                Dự án Số Hóa Địa Chỉ Đỏ Phường Bình Lộc nhằm tưởng niệm và tôn vinh các Anh hùng Liệt sĩ, giáo dục truyền thống yêu nước cho thế hệ trẻ.
+                Dự án Số Hóa Địa Chỉ Đỏ Phường Bình Lộc nhằm tưởng niệm và tôn
+                vinh các Anh hùng Liệt sĩ, giáo dục truyền thống yêu nước cho
+                thế hệ trẻ.
               </p>
             </div>
             <div>
@@ -64,5 +66,5 @@ export function MainLayout({ children }: MainLayoutProps) {
         </div>
       </footer>
     </div>
-  )
+  );
 }

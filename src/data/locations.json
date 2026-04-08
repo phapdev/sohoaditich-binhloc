@@ -4,12 +4,12 @@
     "name": "Nhà bia ghi tên liệt sĩ phường Bình Lộc",
     "address": "Kp phố 1, phường Bình Lộc",
     "coordinates": {
-      "lat": 10.7769,
-      "lng": 106.7009
+      "lat": 10.975614,
+      "lng": 107.236701
     },
     "history": "Nhà bia ghi tên liệt sĩ phường Bình Lộc là nơi tưởng niệm các anh hùng liệt sĩ đã hy sinh vì độc lập, tự do của Tổ quốc. Đây là địa chỉ đỏ quan trọng, nơi giáo dục truyền thống yêu nước cho thế hệ trẻ. Nhà bia được xây dựng để ghi nhớ công ơn của các liệt sĩ quê hương Bình Lộc, những người đã không tiếc máu xương để bảo vệ quê hương, đất nước.",
     "images": [
-      "/images/nha-bia-1.jpg",
+      "/images/nha-bia-liet-sy.jpg",
       "/images/nha-bia-2.jpg"
     ]
   },
@@ -18,12 +18,12 @@
     "name": "Đền thờ Liệt sỹ",
     "address": "Quốc lộ 1A, phường Bình Lộc",
     "coordinates": {
-      "lat": 10.7780,
-      "lng": 106.7020
+      "lat": 10.94143353991502,
+      "lng": 107.21726135721171
     },
     "history": "Đền thờ Liệt sỹ phường Bình Lộc là công trình tâm linh quan trọng, nơi thờ tự và tưởng niệm các anh hùng liệt sĩ. Đền được xây dựng trên Quốc lộ 1A, tạo điều kiện thuận lợi cho nhân dân và du khách đến thăm viếng, dâng hương tưởng nhớ. Đây là nơi giáo dục truyền thống cách mạng, khơi dậy lòng yêu nước, tự hào dân tộc cho các thế hệ, đặc biệt là thanh thiếu niên.",
     "images": [
-      "/images/den-tho-1.jpg",
+      "https://res.cloudinary.com/dqtutjlng/image/upload/v1774362684/unnamed_ncp4lo.jpg",
       "/images/den-tho-2.jpg"
     ]
   }

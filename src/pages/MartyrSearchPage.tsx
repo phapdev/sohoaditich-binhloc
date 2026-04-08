@@ -1,7 +1,7 @@
-import { useState, useMemo } from 'react'
-import { Link } from 'react-router-dom'
-import { Search, ExternalLink } from 'lucide-react'
-import { Input } from '@/components/ui/input'
+import { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
+import { Search, ExternalLink } from "lucide-react";
+import { Input } from "@/components/ui/input";
 import {
   Table,
   TableBody,
@@ -9,69 +9,75 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import martyrsData from '@/data/martyrs.json'
-import { motion } from 'framer-motion'
+} from "@/components/ui/table";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import martyrsData from "@/data/martyrs.json";
+import { motion } from "framer-motion";
 
 type Martyr = {
-  id: number
-  name: string
-  birthYear: number
-  deathYear: number
-  hometown: string
-  rank: string
-  description: string
-}
+  id: number;
+  name: string;
+  birthYear: number;
+  deathYear: number;
+  hometown: string;
+  rank: string;
+  description: string;
+};
 
 export function MartyrSearchPage() {
-  const [searchTerm, setSearchTerm] = useState('')
+  const [searchTerm, setSearchTerm] = useState("");
   const [sortConfig, setSortConfig] = useState<{
-    key: keyof Martyr | null
-    direction: 'asc' | 'desc'
-  }>({ key: null, direction: 'asc' })
+    key: keyof Martyr | null;
+    direction: "asc" | "desc";
+  }>({ key: null, direction: "asc" });
 
-  const martyrs = martyrsData as Martyr[]
+  const martyrs = martyrsData as Martyr[];
 
   const handleSort = (key: keyof Martyr) => {
     setSortConfig((prev) => ({
       key,
-      direction: prev.key === key && prev.direction === 'asc' ? 'desc' : 'asc',
-    }))
-  }
+      direction: prev.key === key && prev.direction === "asc" ? "desc" : "asc",
+    }));
+  };
 
   const filteredAndSortedMartyrs = useMemo(() => {
     let filtered = martyrs.filter(
       (martyr) =>
         martyr.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        martyr.hometown.toLowerCase().includes(searchTerm.toLowerCase())
-    )
+        martyr.hometown.toLowerCase().includes(searchTerm.toLowerCase()),
+    );
 
     if (sortConfig.key) {
       filtered.sort((a, b) => {
-        const aValue = a[sortConfig.key!]
-        const bValue = b[sortConfig.key!]
+        const aValue = a[sortConfig.key!];
+        const bValue = b[sortConfig.key!];
 
-        if (typeof aValue === 'string' && typeof bValue === 'string') {
-          return sortConfig.direction === 'asc'
+        if (typeof aValue === "string" && typeof bValue === "string") {
+          return sortConfig.direction === "asc"
             ? aValue.localeCompare(bValue)
-            : bValue.localeCompare(aValue)
+            : bValue.localeCompare(aValue);
         }
 
-        if (typeof aValue === 'number' && typeof bValue === 'number') {
-          return sortConfig.direction === 'asc'
+        if (typeof aValue === "number" && typeof bValue === "number") {
+          return sortConfig.direction === "asc"
             ? aValue - bValue
-            : bValue - aValue
+            : bValue - aValue;
         }
 
-        return 0
-      })
+        return 0;
+      });
     }
 
-    return filtered
-  }, [martyrs, searchTerm, sortConfig])
+    return filtered;
+  }, [martyrs, searchTerm, sortConfig]);
 
-  const SortableHeader = ({ columnKey, label }: { columnKey: keyof Martyr; label: string }) => (
+  const SortableHeader = ({
+    columnKey,
+    label,
+  }: {
+    columnKey: keyof Martyr;
+    label: string;
+  }) => (
     <TableHead
       className="cursor-pointer select-none hover:bg-muted/50"
       onClick={() => handleSort(columnKey)}
@@ -80,15 +86,15 @@ export function MartyrSearchPage() {
         <span>{label}</span>
         {sortConfig.key === columnKey && (
           <span className="text-xs">
-            {sortConfig.direction === 'asc' ? '↑' : '↓'}
+            {sortConfig.direction === "asc" ? "↑" : "↓"}
           </span>
         )}
       </div>
     </TableHead>
-  )
+  );
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 p-4 pt-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -139,7 +145,10 @@ export function MartyrSearchPage() {
               <TableBody>
                 {filteredAndSortedMartyrs.length > 0 ? (
                   filteredAndSortedMartyrs.map((martyr) => (
-                    <TableRow key={martyr.id} className="cursor-pointer hover:bg-muted/50">
+                    <TableRow
+                      key={martyr.id}
+                      className="cursor-pointer hover:bg-muted/50"
+                    >
                       <TableCell className="font-medium">
                         <Link
                           to={`/martyrs/${martyr.id}`}
@@ -153,12 +162,17 @@ export function MartyrSearchPage() {
                       <TableCell>{martyr.deathYear}</TableCell>
                       <TableCell>{martyr.hometown}</TableCell>
                       <TableCell>{martyr.rank}</TableCell>
-                      <TableCell className="max-w-md">{martyr.description}</TableCell>
+                      <TableCell className="max-w-md">
+                        {martyr.description}
+                      </TableCell>
                     </TableRow>
                   ))
                 ) : (
                   <TableRow>
-                    <TableCell colSpan={6} className="text-center text-muted-foreground">
+                    <TableCell
+                      colSpan={6}
+                      className="text-center text-muted-foreground"
+                    >
                       Không tìm thấy kết quả
                     </TableCell>
                   </TableRow>
@@ -169,5 +183,5 @@ export function MartyrSearchPage() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

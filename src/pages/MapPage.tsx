@@ -28,7 +28,7 @@ export function MapPage() {
     : 'https://www.google.com/maps?q=10.7769,106.7009&hl=vi&z=14&output=embed'
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 mx-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

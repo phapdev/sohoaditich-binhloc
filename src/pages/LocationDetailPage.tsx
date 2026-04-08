@@ -103,6 +103,7 @@ export function LocationDetailPage() {
                   allowFullScreen
                   referrerPolicy="no-referrer-when-downgrade"
                   src={`https://www.google.com/maps?q=${location.coordinates.lat},${location.coordinates.lng}&hl=vi&z=15&output=embed`}
+                  
                 />
               </div>
             </div>
