@@ -7,9 +7,12 @@ import { ActivitiesPage } from "@/pages/ActivitiesPage";
 import { LocationsPage } from "@/pages/LocationsPage";
 import { LocationDetailPage } from "@/pages/LocationDetailPage";
 import { MapPage } from "@/pages/MapPage";
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
+    <>
+    <Analytics />
     <BrowserRouter>
       <MainLayout>
         <Routes>
@@ -20,9 +23,10 @@ function App() {
           <Route path="/locations" element={<LocationsPage />} />
           <Route path="/locations/:id" element={<LocationDetailPage />} />
           <Route path="/map" element={<MapPage />} />
-        </Routes>
-      </MainLayout>
-    </BrowserRouter>
+          </Routes>
+        </MainLayout>
+      </BrowserRouter>
+    </>
   );
 }
 
