@@ -35,11 +35,11 @@ export function MainLayout({ children }: MainLayoutProps) {
               <h3 className="mb-4 font-serif text-lg font-bold">Liên hệ</h3>
               <div className="space-y-2 text-sm text-muted-foreground">
                 <p>
-                  <strong>Đoàn Thanh niên Phường Bình Lộc</strong>
+                  <strong>Đoàn Thanh niên Cộng sản Hồ Chí Minh Phường Bình Lộc</strong>
                 </p>
                 <p>Địa chỉ: Phường Bình Lộc, Tỉnh Đồng Nai</p>
-                <p>Email: doantn.binhloc@example.com</p>
-                <p>Điện thoại: (028) 1234 5678</p>
+                <p>Email: doanphuongsuoitre@gmail.com</p>
+                <p>Điện thoại: 09 19905399</p>
               </div>
             </div>
             <div>

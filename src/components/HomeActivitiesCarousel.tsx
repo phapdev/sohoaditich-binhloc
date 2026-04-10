@@ -59,7 +59,7 @@ export function HomeActivitiesCarousel() {
           align: 'start',
           loop: true,
         }}
-        className="w-full"
+        className="w-full px-2 md:px-8"
       >
         <CarouselContent className="-ml-2 md:-ml-4">
           {pastActivities.map((activity, index) => (
@@ -69,14 +69,16 @@ export function HomeActivitiesCarousel() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -6 }}
+                className="h-full"
               >
-                <Card className="group h-full overflow-hidden transition-all hover:shadow-lg">
+                <Card className="group h-full overflow-hidden rounded-2xl border-border/60 bg-card/95 transition-all duration-300 hover:border-primary/30 hover:shadow-xl">
                   <div className="relative aspect-video overflow-hidden">
                     {activity.images && activity.images.length > 0 ? (
                       <img
                         src={activity.images[0]}
                         alt={activity.title}
-                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                         loading="lazy"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement
@@ -88,14 +90,18 @@ export function HomeActivitiesCarousel() {
                         <Calendar className="h-16 w-16 text-primary/30" />
                       </div>
                     )}
-                    {/* Gradient Overlay for better text readability */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20" />
-                    
-                    {/* Content Overlay */}
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/5" />
+                    <div className="absolute left-3 top-3">
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-black/35 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                        <Calendar className="h-3.5 w-3.5" />
+                        Hoạt động
+                      </span>
+                    </div>
+
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                      <div className="flex items-center space-x-2 mb-2">
+                      <div className="mb-2 flex items-center gap-2 text-white/90">
                         <Calendar className="h-4 w-4" />
-                        <span className="text-sm">
+                        <span className="text-sm font-medium">
                           {new Date(activity.date).toLocaleDateString('vi-VN', {
                             year: 'numeric',
                             month: 'long',
@@ -103,19 +109,19 @@ export function HomeActivitiesCarousel() {
                           })}
                         </span>
                       </div>
-                      <h3 className="font-serif text-lg font-bold line-clamp-2">
+                      <h3 className="line-clamp-2 font-serif text-lg font-bold leading-snug md:text-xl">
                         {activity.title}
                       </h3>
                     </div>
                   </div>
-                  <CardContent className="p-4">
-                    <p className="line-clamp-3 text-sm text-muted-foreground">
+                  <CardContent className="space-y-4 p-5">
+                    <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground">
                       {activity.summary}
                     </p>
-                    <Link to={`/activities#${activity.id}`} className="mt-4 block">
-                      <Button variant="link" className="h-auto p-0 text-sm">
+                    <Link to={`/activities#${activity.id}`} className="block">
+                      <Button variant="link" className="h-auto p-0 text-sm font-semibold text-primary">
                         Đọc thêm
-                        <ArrowRight className="ml-2 h-3 w-3" />
+                        <ArrowRight className="ml-2 h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                       </Button>
                     </Link>
                   </CardContent>
@@ -124,8 +130,8 @@ export function HomeActivitiesCarousel() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-0" />
-        <CarouselNext className="right-0" />
+        <CarouselPrevious className="left-1 h-9 w-9 border-border/60 bg-background/90 shadow-sm backdrop-blur-sm hover:bg-background md:left-2" />
+        <CarouselNext className="right-1 h-9 w-9 border-border/60 bg-background/90 shadow-sm backdrop-blur-sm hover:bg-background md:right-2" />
       </Carousel>
     </section>
   )

@@ -37,48 +37,49 @@ export function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
         </div>
 
-        <div className="relative z-10 container mx-auto px-0 sm:px-6 lg:px-8">
-          <div className="grid min-h-[85vh] items-center gap-8 lg:grid-cols-2 lg:gap-12">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid min-h-[78vh] items-center gap-8 sm:min-h-[82vh] lg:min-h-[85vh] lg:grid-cols-2 lg:gap-12">
             {/* Left: Text Overlay */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-6 py-12 lg:py-24"
+              className="space-y-5 py-10 sm:space-y-6 sm:py-12 lg:py-24"
             >
               <div>
-                <h1 className="font-serif text-5xl font-bold text-white sm:text-6xl md:text-7xl lg:text-8xl">
+                <h1 className="font-serif text-4xl font-bold text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
                   Phường Bình Lộc
                 </h1>
-                <h2 className="mt-4 font-serif text-2xl font-semibold text-secondary sm:text-3xl md:text-4xl">
+                <h2 className="mt-3 font-Playfair text-xl font-semibold text-secondary sm:mt-4 sm:text-2xl md:text-3xl lg:text-4xl">
                   Miền đất của những địa chỉ đỏ và truyền thống yêu nước
                 </h2>
               </div>
 
-              <div className="max-w-2xl space-y-4 text-lg leading-relaxed text-white/90 sm:text-xl">
-                <p>
-                  Công trình thanh niên do Đoàn thanh niên phường Bình Lộc phối hợp tổ chức.
-                  <strong className="text-secondary"> "Số hóa địa chỉ đỏ phường Bình Lộc"</strong>,
+              <div className="max-w-2xl space-y-3 text-base font-Playfair leading-relaxed text-white/90 sm:space-y-4 sm:text-lg md:mx-4 md:text-xl lg:mx-0">
+                <p className="text-justify text-base sm:text-lg md:text-xl lg:text-2xl">
+                  Công trình thanh niên do Đoàn thanh niên Cộng sản Hồ Chí Minh phường Bình Lộc thực hiện.<br />
+                  <strong className="text-secondary"> "Số hóa địa chỉ đỏ phường Bình Lộc"</strong>
                   nhằm phát huy vai trò nòng cốt, đi đầu của các cấp cán bộ đoàn trong chuyển đổi số
                   quảng bá và giáo dục truyền thống yêu nước cho thế hệ trẻ.
                 </p>
-                <p>
+
+                {/* <p className="text-justify sm:text-lg md:text-xl lg:text-2xl">
                   Dự án tập trung vào việc xây dựng cơ sở dữ liệu số về các liệt sĩ và các địa chỉ đỏ
                   trên địa bàn phường, tạo điều kiện thuận lợi cho nhân dân, đặc biệt là thanh thiếu niên,
                   có thể tra cứu thông tin một cách dễ dàng thông qua mã QR.
-                </p>
+                </p> */}
               </div>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-3 sm:gap-4">
                 <Link to="/martyrs">
-                  <Button size="lg" className="min-h-[44px] text-base">
-                    <Search className="mr-2 h-5 w-5" />
+                  <Button size="lg" className="min-h-[44px] text-sm sm:text-base">
+                    <Search className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                     Tra cứu Liệt sĩ
                   </Button>
                 </Link>
                 <Link to="/locations">
-                  <Button size="lg" variant="outline" className="min-h-[44px] border-white/30 bg-white/10 text-base text-white backdrop-blur-sm hover:bg-white/20">
-                    <BookOpen className="mr-2 h-5 w-5" />
+                  <Button size="lg" variant="outline" className="min-h-[44px] border-white/30 bg-white/10 text-sm text-white backdrop-blur-sm hover:bg-white/20 sm:text-base">
+                    <BookOpen className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                     Khám phá Di tích
                   </Button>
                 </Link>
@@ -123,22 +124,22 @@ export function HomePage() {
       </section>
 
       {/* Section: Văn hóa - Lịch sử */}
-      <section className="bg-gradient-to-b from-background to-muted/30 py-16 md:py-24">
+      <section className="bg-gradient-to-b from-background to-muted/30 py-14 sm:py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-12 text-center"
+            className="mb-10 text-center sm:mb-12"
           >
-            <h2 className="mb-4 font-serif text-3xl font-bold text-primary md:text-4xl lg:text-5xl">
+            <h2 className="mb-3 font-serif text-2xl font-bold text-primary sm:mb-4 sm:text-3xl md:text-4xl lg:text-5xl">
               Văn hóa - Lịch sử
             </h2>
-            <h3 className="mb-6 font-serif text-2xl font-semibold md:text-3xl">
+            <h3 className="mb-5 font-serif text-xl font-semibold sm:mb-6 sm:text-2xl md:text-3xl">
               ĐỊA CHỈ ĐỎ PHƯỜNG BÌNH LỘC
             </h3>
-            <div className="mx-auto max-w-4xl space-y-4 text-justify leading-relaxed text-muted-foreground">
+            <div className="mx-auto max-w-4xl space-y-3 text-justify text-sm leading-relaxed text-muted-foreground sm:space-y-4 sm:text-base">
               <p>
                 Phường Bình Lộc tự hào là nơi lưu giữ và phát huy giá trị các địa chỉ đỏ, nơi tưởng niệm
                 và tôn vinh các Anh hùng Liệt sĩ đã hy sinh vì độc lập, tự do của Tổ quốc. Các di tích lịch sử
@@ -164,7 +165,7 @@ export function HomePage() {
             <img
               src="/images/dang-huong-ntls.jpg"
               alt="Di tích lịch sử Phường Bình Lộc"
-              className="h-[400px] w-full object-cover md:h-[500px]"
+              className="h-[260px] w-full object-cover sm:h-[340px] md:h-[430px] lg:h-[500px]"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -173,19 +174,19 @@ export function HomePage() {
       </section>
 
       {/* Section: Di tích Thắng cảnh */}
-      <section className="bg-background py-16 md:py-24">
+      <section className="bg-background py-14 sm:py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-12 text-center"
+            className="mb-10 text-center sm:mb-12"
           >
-            <h2 className="mb-4 font-serif text-3xl font-bold text-primary md:text-4xl lg:text-5xl">
+            <h2 className="mb-3 font-serif text-2xl font-bold text-primary sm:mb-4 sm:text-3xl md:text-4xl lg:text-5xl">
               Những địa chỉ đỏ - Di tích lịch sử
             </h2>
-            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+            <p className="mx-auto max-w-2xl text-sm text-muted-foreground sm:text-base md:text-lg">
               Khám phá các di tích lịch sử và địa chỉ đỏ trên địa bàn phường Bình Lộc
             </p>
           </motion.div>
@@ -222,12 +223,12 @@ export function HomePage() {
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20" />
                   </div>
-                  <CardHeader>
-                    <CardTitle className="font-serif text-2xl">{location.name}</CardTitle>
-                    <CardDescription className="text-base">{location.address}</CardDescription>
+                  <CardHeader className="p-5 sm:p-6">
+                    <CardTitle className="font-serif text-xl sm:text-2xl">{location.name}</CardTitle>
+                    <CardDescription className="text-sm sm:text-base">{location.address}</CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <p className="mb-6 line-clamp-3 leading-relaxed text-muted-foreground">
+                  <CardContent className="p-5 pt-0 sm:p-6 sm:pt-0">
+                    <p className="mb-5 line-clamp-3 text-sm leading-relaxed text-muted-foreground sm:mb-6 sm:text-base">
                       {location.history}
                     </p>
                     <Link to={`/locations/${location.id}`}>
@@ -245,26 +246,26 @@ export function HomePage() {
       </section>
 
       {/* Activities Carousel Section */}
-      <section className="bg-muted/30 py-16 md:py-24">
+      <section className="bg-muted/30 py-14 sm:py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <HomeActivitiesCarousel />
         </div>
       </section>
 
       {/* Quick Access Section */}
-      <section className="bg-background py-16 md:py-24">
+      <section className="bg-background py-14 sm:py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-12 text-center"
+            className="mb-10 text-center sm:mb-12"
           >
-            <h2 className="mb-4 font-serif text-3xl font-bold text-primary md:text-4xl">
+            <h2 className="mb-3 font-serif text-2xl font-bold text-primary sm:mb-4 sm:text-3xl md:text-4xl">
               Truy cập nhanh
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-sm text-muted-foreground sm:text-base md:text-lg">
               Các tính năng chính của ứng dụng
             </p>
           </motion.div>
@@ -279,7 +280,7 @@ export function HomePage() {
               <Card className="h-full rounded-xl transition-all hover:shadow-lg md:rounded-2xl">
                 <CardHeader>
                   <Search className="mb-2 h-10 w-10 text-primary" />
-                  <CardTitle className="font-serif text-xl">Tra cứu Liệt sĩ</CardTitle>
+                  <CardTitle className="font-serif text-lg sm:text-xl">Tra cứu Liệt sĩ</CardTitle>
                   <CardDescription>
                     Tìm kiếm thông tin về các Anh hùng Liệt sĩ đã hy sinh vì Tổ quốc
                   </CardDescription>
@@ -301,7 +302,7 @@ export function HomePage() {
               <Card className="h-full rounded-xl transition-all hover:shadow-lg md:rounded-2xl">
                 <CardHeader>
                   <BookOpen className="mb-2 h-10 w-10 text-primary" />
-                  <CardTitle className="font-serif text-xl">Di tích</CardTitle>
+                  <CardTitle className="font-serif text-lg sm:text-xl">Di tích</CardTitle>
                   <CardDescription>
                     Khám phá các địa chỉ đỏ và di tích lịch sử trên địa bàn phường
                   </CardDescription>
@@ -323,7 +324,7 @@ export function HomePage() {
               <Card className="h-full rounded-xl transition-all hover:shadow-lg md:rounded-2xl">
                 <CardHeader>
                   <MapPin className="mb-2 h-10 w-10 text-primary" />
-                  <CardTitle className="font-serif text-xl">Bản đồ</CardTitle>
+                  <CardTitle className="font-serif text-lg sm:text-xl">Bản đồ</CardTitle>
                   <CardDescription>
                     Xem vị trí các địa chỉ đỏ trên bản đồ tương tác
                   </CardDescription>
